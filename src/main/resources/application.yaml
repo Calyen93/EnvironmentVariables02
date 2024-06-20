@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: default
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: test
+
+server:
+  port: 4000
+
+app:
+  welcomeMsg: "Hello from Test"
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+server:
+  port: 5000
+
+app:
+  welcomeMsg: "Hello from Prod"
